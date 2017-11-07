@@ -27,15 +27,15 @@ body {
 }
 
 .container {
-	width: 1200px;
+	width: 900px;
 	height: 100%;
 	margin: 0 auto;
-}
+	border: 1px solid red;
+} 
 
-.navbar {
+/*.navbar {
 	width: 60%;
 	height: 216px;
-	margin: 0 auto;
 	border: 1px solid red;
 	li {
 		float: left;
@@ -45,12 +45,13 @@ body {
 		font-weight: 700;
 		margin: 100px 52px 100px 53px;
 	}
-}
+}*/
 
 .logo {
-	width: 600px;
-	height: 84px;
-	margin: 0 auto;
+	img {
+		width: 150px;
+		border: 1px solid red;
+	}
 }
 
 .tagline {
