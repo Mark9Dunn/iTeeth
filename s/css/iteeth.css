@@ -1,0 +1,104 @@
+/* line 1, ../sass/iteeth.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s,
+samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul,
+li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* line 18, ../sass/iteeth.scss */
+.clearfix:after, .container:after, .imgIntro:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 25, ../sass/iteeth.scss */
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* line 29, ../sass/iteeth.scss */
+a {
+  color: #000;
+}
+
+/* line 33, ../sass/iteeth.scss */
+.container {
+  width: 900px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* line 40, ../sass/iteeth.scss */
+.navbar {
+  float: right;
+  margin-top: 66px;
+}
+/* line 43, ../sass/iteeth.scss */
+.navbar li {
+  margin-right: 12px;
+  margin-left: 12px;
+  float: left;
+  color: #414554;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+/* line 51, ../sass/iteeth.scss */
+.navbar li a:hover {
+  color: #FF5500;
+}
+
+/* line 57, ../sass/iteeth.scss */
+.logo {
+  width: 150px;
+  margin: 24px 0px 24px 24px;
+  float: left;
+}
+
+/* line 64, ../sass/iteeth.scss */
+.imgIntro {
+  display: block;
+  background-color: #fcfcfc;
+}
+
+/* line 71, ../sass/iteeth.scss */
+.imgMain img {
+  width: 50%;
+  float: left;
+}
+
+/* line 77, ../sass/iteeth.scss */
+.mainTag {
+  font-size: 48px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #212D38;
+  margin-left: 48px;
+  width: 35%;
+  line-height: 1.5em;
+  float: left;
+  text-align: center;
+  margin-top: 150px;
+}
+
+/* line 90, ../sass/iteeth.scss */
+.tagline {
+  text-transform: uppercase;
+  color: #414554;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 36px;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
