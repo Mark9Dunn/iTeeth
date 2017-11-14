@@ -30,6 +30,20 @@ a {
 	color: #000;
 }
 
+.trans03{
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.trans05{
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
 .container {
 	width: 900px;
 	height: 100%;
@@ -50,6 +64,7 @@ a {
 		font-weight: 700;
 		a:hover {
 			color: #FF5500;
+			@extend .trans05;
 		}
 	}
 }
@@ -95,4 +110,18 @@ a {
 	margin-top: 36px;
 	font-size: 16px;
 	letter-spacing: 2px;
+}
+
+
+@media screen and (min-width: 600px) {
+	
+}
+
+@media screen and (min-width: 700px) {
+	
+}
+
+
+@media screen and (min-width: 900px) {
+
 }

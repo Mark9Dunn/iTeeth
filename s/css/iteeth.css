@@ -33,18 +33,34 @@ a {
 }
 
 /* line 33, ../sass/iteeth.scss */
+.trans03 {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/* line 40, ../sass/iteeth.scss */
+.trans05, .navbar li a:hover {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+/* line 47, ../sass/iteeth.scss */
 .container {
   width: 900px;
   height: 100%;
   margin: 0 auto;
 }
 
-/* line 40, ../sass/iteeth.scss */
+/* line 54, ../sass/iteeth.scss */
 .navbar {
   float: right;
   margin-top: 66px;
 }
-/* line 43, ../sass/iteeth.scss */
+/* line 57, ../sass/iteeth.scss */
 .navbar li {
   margin-right: 12px;
   margin-left: 12px;
@@ -54,31 +70,31 @@ a {
   text-transform: uppercase;
   font-weight: 700;
 }
-/* line 51, ../sass/iteeth.scss */
+/* line 65, ../sass/iteeth.scss */
 .navbar li a:hover {
   color: #FF5500;
 }
 
-/* line 57, ../sass/iteeth.scss */
+/* line 72, ../sass/iteeth.scss */
 .logo {
   width: 150px;
   margin: 24px 0px 24px 24px;
   float: left;
 }
 
-/* line 64, ../sass/iteeth.scss */
+/* line 79, ../sass/iteeth.scss */
 .imgIntro {
   display: block;
   background-color: #fcfcfc;
 }
 
-/* line 71, ../sass/iteeth.scss */
+/* line 86, ../sass/iteeth.scss */
 .imgMain img {
   width: 50%;
   float: left;
 }
 
-/* line 77, ../sass/iteeth.scss */
+/* line 92, ../sass/iteeth.scss */
 .mainTag {
   font-size: 48px;
   text-transform: uppercase;
@@ -92,7 +108,7 @@ a {
   margin-top: 150px;
 }
 
-/* line 90, ../sass/iteeth.scss */
+/* line 105, ../sass/iteeth.scss */
 .tagline {
   text-transform: uppercase;
   color: #414554;
