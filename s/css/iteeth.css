@@ -16,7 +16,7 @@ menu, nav, output, ruby, section, summary, time, mark, audio, video {
 }
 
 /* line 18, ../sass/iteeth.scss */
-.clearfix:after, .container:after, .imgIntro:after {
+.clearfix:after, .container:after, .imgIntro:after, .patIns li:after {
   content: "";
   display: table;
   clear: both;
@@ -33,6 +33,29 @@ a {
 }
 
 /* line 33, ../sass/iteeth.scss */
+h2 {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #414554;
+  font-weight: bold;
+}
+
+/* line 40, ../sass/iteeth.scss */
+h3 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #414554;
+}
+
+/* line 46, ../sass/iteeth.scss */
+p {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 2em;
+}
+
+/* line 53, ../sass/iteeth.scss */
 .trans03 {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -40,7 +63,7 @@ a {
   transition: all 0.3s ease-in-out;
 }
 
-/* line 40, ../sass/iteeth.scss */
+/* line 60, ../sass/iteeth.scss */
 .trans05, .navbar li a:hover {
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -48,67 +71,72 @@ a {
   transition: all 0.5s ease-in-out;
 }
 
-/* line 47, ../sass/iteeth.scss */
+/* line 67, ../sass/iteeth.scss */
 .container {
-  width: 900px;
+  width: 960px;
   height: 100%;
   margin: 0 auto;
 }
 
-/* line 54, ../sass/iteeth.scss */
+/* line 74, ../sass/iteeth.scss */
 .navbar {
   float: right;
   margin-top: 66px;
 }
-/* line 57, ../sass/iteeth.scss */
+/* line 77, ../sass/iteeth.scss */
 .navbar li {
   margin-right: 12px;
   margin-left: 12px;
   float: left;
-  color: #414554;
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 700;
 }
-/* line 65, ../sass/iteeth.scss */
+/* line 84, ../sass/iteeth.scss */
+.navbar li a {
+  color: #414554;
+}
+/* line 87, ../sass/iteeth.scss */
 .navbar li a:hover {
   color: #FF5500;
 }
 
-/* line 72, ../sass/iteeth.scss */
+/* line 94, ../sass/iteeth.scss */
 .logo {
   width: 150px;
   margin: 24px 0px 24px 24px;
   float: left;
 }
 
-/* line 79, ../sass/iteeth.scss */
+/* line 101, ../sass/iteeth.scss */
 .imgIntro {
   display: block;
+  position: relative;
   background-color: #fcfcfc;
 }
 
-/* line 86, ../sass/iteeth.scss */
+/* line 109, ../sass/iteeth.scss */
 .imgMain img {
   width: 50%;
   float: left;
 }
 
-/* line 92, ../sass/iteeth.scss */
+/* line 115, ../sass/iteeth.scss */
 .mainTag {
-  font-size: 48px;
+  font-size: 24px;
   text-transform: uppercase;
   font-weight: 800;
   color: #212D38;
-  margin-left: 48px;
-  width: 35%;
+  width: 28%;
   line-height: 1.5em;
+  position: absolute;
   float: left;
-  text-align: center;
-  margin-top: 150px;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
 }
 
-/* line 105, ../sass/iteeth.scss */
+/* line 129, ../sass/iteeth.scss */
 .tagline {
   text-transform: uppercase;
   color: #414554;
@@ -117,4 +145,303 @@ a {
   margin-top: 36px;
   font-size: 16px;
   letter-spacing: 2px;
+}
+
+/* line 139, ../sass/iteeth.scss */
+.imgGallery {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  background-color: #3c425c;
+}
+/* line 143, ../sass/iteeth.scss */
+.imgGallery img {
+  margin-right: 24px;
+}
+/* line 146, ../sass/iteeth.scss */
+.imgGallery .mainDis {
+  float: left;
+  margin-left: 48px;
+}
+/* line 149, ../sass/iteeth.scss */
+.imgGallery .mainDis img {
+  width: 324px;
+}
+
+/* line 155, ../sass/iteeth.scss */
+.bgGrey {
+  background-color: #f4f3f3;
+  padding: 48px 0px;
+}
+
+/* line 161, ../sass/iteeth.scss */
+.insurance li {
+  overflow: hidden;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 24px;
+  margin-bottom: 24px;
+}
+/* line 167, ../sass/iteeth.scss */
+.insurance li img {
+  width: 290px;
+}
+/* line 171, ../sass/iteeth.scss */
+.insurance p {
+  margin: 0 auto;
+  margin-bottom: 48px;
+  width: 75%;
+}
+
+/* line 178, ../sass/iteeth.scss */
+.experience {
+  padding: 48px 0px;
+}
+
+/* line 182, ../sass/iteeth.scss */
+.xpWindow {
+  float: left;
+  width: 46%;
+  text-align: center;
+  border: 2px solid #f4f3f3;
+  margin-left: 14px;
+  margin-right: 14px;
+  margin-top: 24px;
+}
+/* line 190, ../sass/iteeth.scss */
+.xpWindow h2 {
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+/* line 194, ../sass/iteeth.scss */
+.xpWindow p {
+  width: 84%;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+/* line 199, ../sass/iteeth.scss */
+.xpWindow a {
+  color: #00aaef;
+  font-weight: bold;
+}
+
+/* line 205, ../sass/iteeth.scss */
+.xList {
+  list-style-type: disc;
+}
+/* line 207, ../sass/iteeth.scss */
+.xList p {
+  margin-bottom: 6px;
+}
+/* line 211, ../sass/iteeth.scss */
+.xList li:last-of-type {
+  margin-bottom: 24px;
+}
+
+/* line 217, ../sass/iteeth.scss */
+.bgDark {
+  background-color: #3c425c;
+  color: white;
+}
+/* line 220, ../sass/iteeth.scss */
+.bgDark .servTitle {
+  color: white;
+}
+/* line 223, ../sass/iteeth.scss */
+.bgDark p {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 36px;
+}
+
+/* line 230, ../sass/iteeth.scss */
+.services {
+  padding: 48px 0px;
+}
+
+/* line 234, ../sass/iteeth.scss */
+.servTitle {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #414554;
+  font-weight: 700;
+}
+
+/* line 243, ../sass/iteeth.scss */
+.services li {
+  margin: 0 auto;
+  display: inline-block;
+  margin-top: 24px;
+}
+
+/* line 249, ../sass/iteeth.scss */
+.serviceIcon {
+  width: 280px;
+  margin-left: 24px;
+}
+
+/* line 254, ../sass/iteeth.scss */
+.serviceIcon svg {
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+}
+/* line 258, ../sass/iteeth.scss */
+.serviceIcon svg .stroke {
+  stroke-width: 2px;
+  stroke: #414554;
+  fill: none;
+}
+/* line 263, ../sass/iteeth.scss */
+.serviceIcon svg .blue {
+  stroke: #1b75bc;
+  fill: #1b75bc;
+}
+
+/* line 269, ../sass/iteeth.scss */
+.minTitle {
+  text-align: center;
+}
+
+/* line 273, ../sass/iteeth.scss */
+.aboutUs p {
+  margin-bottom: 8px;
+}
+
+/* line 277, ../sass/iteeth.scss */
+.grid {
+  width: 30%;
+  display: inline-block;
+  margin-top: 48px;
+  margin-bottom: 48px;
+  text-transform: uppercase;
+  height: 150px;
+  margin-left: 18px;
+  vertical-align: top;
+}
+/* line 286, ../sass/iteeth.scss */
+.grid li:first-of-type {
+  width: 30px;
+  margin-left: 12px;
+  padding-left: -12px;
+}
+/* line 291, ../sass/iteeth.scss */
+.grid .white {
+  fill: white;
+  color: white;
+}
+
+/* line 297, ../sass/iteeth.scss */
+.miniDis {
+  display: block;
+}
+/* line 299, ../sass/iteeth.scss */
+.miniDis img {
+  width: 224px;
+}
+
+/* line 305, ../sass/iteeth.scss */
+.sect {
+  display: inline-block;
+}
+/* line 307, ../sass/iteeth.scss */
+.sect a:nth-of-type(2n) {
+  margin-top: 22px;
+}
+
+/* line 312, ../sass/iteeth.scss */
+.details {
+  width: 100%;
+  display: inline-block;
+  margin-left: 12px;
+  text-transform: none;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+/* line 321, ../sass/iteeth.scss */
+.grid ul {
+  display: block;
+}
+
+/* line 325, ../sass/iteeth.scss */
+.grid h2 {
+  margin: 12px 0px 12px 12px;
+  text-align: center;
+}
+
+/* line 330, ../sass/iteeth.scss */
+.grid li {
+  float: left;
+  padding-right: 12px;
+}
+
+/* line 336, ../sass/iteeth.scss */
+.staffDesc ul {
+  position: relative;
+}
+/* line 339, ../sass/iteeth.scss */
+.staffDesc li {
+  float: left;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-bottom: 48px;
+  text-align: center;
+}
+/* line 345, ../sass/iteeth.scss */
+.staffDesc li img {
+  width: 270px;
+  border-radius: 8px;
+}
+/* line 350, ../sass/iteeth.scss */
+.staffDesc p {
+  font-size: 14px;
+  width: 75%;
+  margin: 0 auto;
+  margin-bottom: 48px;
+}
+/* line 356, ../sass/iteeth.scss */
+.staffDesc h2 {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+/* line 363, ../sass/iteeth.scss */
+.patIns li {
+  width: 28%;
+  border: 1px solid grey;
+  padding-bottom: 36px;
+}
+/* line 369, ../sass/iteeth.scss */
+.patIns button {
+  font-size: 10px;
+  text-transform: uppercase;
+  padding: 6px;
+  background-color: #414554;
+  color: white;
+  border-radius: 2px;
+  border: none;
+}
+
+@media screen and (min-width: 900px) {
+  /* line 392, ../sass/iteeth.scss */
+  .mainTag {
+    font-size: 32px;
+    width: 34%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  /* line 400, ../sass/iteeth.scss */
+  .mainTag {
+    font-size: 36px;
+    width: 28%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /* line 407, ../sass/iteeth.scss */
+  .mainTag {
+    font-size: 48px;
+    width: 28%;
+  }
 }

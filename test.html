@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="s/css/masterplan.css">
+    <link rel="stylesheet" type="text/css" href="s/css/lightbox.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <meta name="description" content="Ducati India’s official site to contact a dealer and book a test ride" />
+    <meta name="keywords" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="" />
+    <meta name="twitter:site" content="" />
+    <meta property="twitter:title" content="" />
+    <meta property="twitter:description" content="" />
+    <script type="text/j">
+      
+
+      $(document).ready(function () {
+        $(".featuredProjects .container ul li").mouseleave(function(){
+          $(this).addClass("active");
+        });
+
+        $(".featuredProjects .container ul li").mouseenter(function(){
+          $(".active").removeClass('active');
+          $(this).removeClass("active");
+        });
+
+        $('.sq').click(function(){
+          if(sqhasbeenTriggered == false){
+            sqID = $(this).attr("id");
+            sqID = Number(sqID);
+            picSelect = sqID;
+            if ($(".picSelect")[0]){
+                  // Do something if class exists
+            } else {
+              $(this).addClass('picSelect');
+              selectedContent = $(".projectContent").detach();
+              $('.picSelect .title').after(selectedContent);
+              $(".sqContent").hide();
+              $(".c"+sqID).show();
+              selectedImage = $(this).attr('id');
+              selectedClass = $(this).attr('class');
+              featuredHeight = $('.sq1').height();
+              featuredOffset = $(this).offset();
+              $(".sq").removeClass('show');
+              showGallery();
+            }
+          };  
+        });
+
+        function showGallery() {
+          $('.parent').removeClass('dim');
+          $('.parent').not('.featuredProjects').addClass('dim');
+          $('.sq').not('.picSelect').addClass('hide');
+          $('.iOShack').addClass('noScroll');
+          $('.nav').removeClass("sticky");
+          topScroll = $('.position').offset();
+          browserH = document.documentElement.clientHeight;
+          browserW = $('.container').width();
+          browserHalf = browserH / 2;
+          var halfImg = featuredHeight / 2;         
+          //Get offset of clicked element from viewport top
+          var offsetClicked = featuredOffset.top - topScroll.top;          
+          //get excat center (clicked element offet - centering elements offet)
+          if ( $(window).width() < 900) {
+            var exactCenter = -offsetClicked;
+            var moveThisAgain = exactCenter;
+          } else {
+            var exactCenter = browserHalf - offsetClicked;
+            var moveThisAgain = exactCenter - halfImg;
+          }
+         
+          skewBack = new TimelineMax();
+          skewBack.to(".picSelect", 0.8,{ y:moveThisAgain, x:'0', left:'0', ease: Back.easeInOut.config(0.6)});
+          skewBack.to(".picSelect", 0.8,{ width:featuredHeight, height:featuredHeight, left:'0', ease: Back.easeInOut.config(0.6)}, "-=0.8");
+          skewBack.set(".picSelect .img",{className:"+=addScroll"}, "-=0.1");
+          skewBack.set(".projectContent",{className:"+=moveout"}, "+=0.1");
+          sqhasbeenTriggered = true;
+        };
+
+        $(".closeGallery").click(function (){
+          $(".picSelect img").attr('src', "i/1" + picSelect + ".png");  
+          sqhasbeenTriggered = false;    
+          skewBack.reverse();
+          
+          setTimeout(function(){
+            $('.parent').removeClass('dim');
+            $('.featuredProjects li').addClass('show').removeClass('hide');
+            $(".sq").removeClass('picSelect');
+            $('.sq').removeClass('hide');
+            $('.iOShack').removeClass('noScroll');   
+                    
+          }, 800);                         
+        });
+
+        $('.next').click(function(){
+          $(".picSelect").addClass('keyFadeOut');
+          sqID++;
+          if(sqID == 6){
+            sqID = 1;
+          };  
+          $(".sqContent").hide();
+          setTimeout(function(){$(".c"+sqID).show();
+            $(".picSelect img").attr('src', "i/3" + sqID + ".png");
+            $(".picSelect").removeClass('keyFadeOut').addClass('keyFadeIn');
+          }, 650);                    
+        });
+         
+        $('.prev').click(function(){
+          $(".picSelect").addClass('keyFadeOut');
+          sqID--;
+          if(sqID == 0){
+            sqID = 5;
+          };
+          $(".sqContent").hide();
+          setTimeout(function(){$(".c"+sqID).show();
+            $(".picSelect img").attr('src', "i/5" + sqID + ".png");
+            $(".picSelect").removeClass('keyFadeOut').addClass('keyFadeIn');
+          }, 650);                   
+        });
+
+
+
+      });
+
+
+
+
+
+      </script>
+
+    <title>Test Page</title>
+  </head>
+
+  <body>
+    <head>
+      <div class="featuredProjects parent" id="projects">
+        <div class="container">
+          <h1 class="title parent">Projects</h1>
+          <ul>
+            <li class="sq sq1 active" id="1">
+              <div class="img">
+                <img src="i/1.png" data-src="i/1.png">
+                <div class="title">Nawras HQ</div>
+              </div>
+            </li>
+            <li class="sq sq2" id="2">
+              <div class="img">
+                <img src="i/3.png" data-src="i/3.png">
+                <button class="close closeGallery">
+                  <svg x="0px" y="0px"  viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+                    <circle class="stroke" cx="30" cy="30" r="28"/>
+                    <line class="stroke" x1="40" y1="20" x2="19" y2="41"/>
+                    <line class="stroke" x1="41" y1="41" x2="20" y2="20"/>
+                  </svg>
+                </button>
+                </div>
+              </div> 
+            </li>
+            <li class="sq sq3" id="3"><div class="img"><img src="i/5.png" data-src="i/5.png"><div class="title">Ministry of Defence, Oman </div></div></li>
+          </ul>
+        </div>
+      </div>
+    </head>
+  </body>
+</html>
