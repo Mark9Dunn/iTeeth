@@ -35,6 +35,7 @@ h2 {
 	text-transform: uppercase;
 	color: #414554;
 	font-weight: bold;
+	margin: 0 auto;
 }
 
 h3 {
@@ -65,13 +66,124 @@ p {
 }
 
 .container {
-	width: 960px;
 	height: 100%;
 	margin: 0 auto;
+	display: block;
+	position: relative;
+	overflow: hidden;
 	@extend .clearfix;
 } 
 
+.navHeader {
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 3;
+  @extend .clearfix;
+}
+ 
+.navHeader ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+ 
+.navHeader li a {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+}
+ 
+.navHeader li a:hover {
+  color: #FF5500;
+	@extend .trans05;
+}
+ 
+.navHeader .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  text-decoration: none;
+}
+ 
+.navHeader .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+.navHeader .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+ 
+.navHeader .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+ 
+.navHeader .menu-icon .navicon:before,
+.navHeader .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+ 
+.navHeader .menu-icon .navicon:before {
+  top: 5px;
+}
+ 
+.navHeader .menu-icon .navicon:after {
+  top: -5px;
+}
+
+.navHeader .menu-btn {
+  display: none;
+}
+ 
+.navHeader .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+ 
+.navHeader .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+ 
+.navHeader .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+ 
+.navHeader .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+ 
+.navHeader .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.navHeader .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
 .navbar {
+	display: none;
 	float: right;
 	margin-top: 66px;
 	li {
@@ -92,14 +204,15 @@ p {
 }
 
 .logo {
-	width: 150px;
-	margin: 24px 0px 24px 24px;
-	float: left;
+	width: 50px;
+	margin: 12px 18px;
+	float: right;
 
 }
 
 .imgIntro {
-	display: block;
+	margin-top: 68px;
+	display: inline-block;
 	position: relative;
 	background-color: #fcfcfc;
 	@extend .clearfix;
@@ -107,23 +220,21 @@ p {
 
 .imgMain {
 	img {
-		width: 50%;
-		float: left;
+		width: 100%;
 	}
 }
 
 .mainTag {
-	font-size: 24px;
+	font-size: 36px;
 	text-transform: uppercase;
 	font-weight: 800;
 	color: #212D38;
-	width: 28%;
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
 	line-height: 1.5em;
-	position: absolute;
-	float: left;
-	top: 50%;
-	left: 75%;
-	transform: translate(-50%, -50%);
+	margin-top: 48px;
+	margin-bottom: 48px;
 }
 
 .tagline {
@@ -137,17 +248,17 @@ p {
 }
 
 .imgGallery {
-	padding-top: 48px;
+	padding-top: 40px;
 	padding-bottom: 48px;
 	background-color: #3c425c;
 	img {
 		margin-right: 24px;
 	}
 	.mainDis {
-		float: left;
-		margin-left: 48px;
 		img {
-			width: 324px;
+			width: 80vw;
+			display: block;
+			margin: 0 auto;
 		}
 	}
 }
@@ -162,10 +273,10 @@ p {
 		overflow: hidden;
 		border-radius: 6px;
 		display: inline-block;
-		margin-right: 24px;
+		margin-left: 6px;
 		margin-bottom: 24px;
 		img {
-			width: 290px;
+			width: 47vw;
 		}
 	}
 	p {
@@ -180,12 +291,11 @@ p {
 }
 
 .xpWindow {
-	float: left;
-	width: 46%;
+	display: block;
+	margin: 0 auto;
+	width: 80%;
 	text-align: center;
 	border: 2px solid #f4f3f3;
-	margin-left: 14px;
-	margin-right: 14px;
 	margin-top: 24px;
 	h2 {
 		margin-top: 24px;
@@ -215,6 +325,7 @@ p {
 }
 
 .bgDark {
+	padding-top: 24px;
 	background-color: #3c425c;
 	color: white;
 	.servTitle {
@@ -241,14 +352,15 @@ p {
 }
 
 .services li {
-	margin: 0 auto;
 	display: inline-block;
 	margin-top: 24px;
+	width: 48%;
+	@extend .clearfix;	
 }
 
 .serviceIcon {
-	width: 280px;
 	margin-left: 24px;
+	height: 190px;
 }
 
 .serviceIcon svg { 
@@ -275,14 +387,13 @@ p {
 }
 
 .grid {
-	width: 30%;
-	display: inline-block;
-	margin-top: 48px;
-	margin-bottom: 48px;
+	width: 80%;
+	display: block;
+	margin: 0 auto;
 	text-transform: uppercase;
-	height: 150px;
-	margin-left: 18px;
+	padding-bottom: 24px;
 	vertical-align: top;
+	@extend .clearfix;
 	li:first-of-type {
 		width: 30px;
 		margin-left: 12px;
@@ -303,7 +414,7 @@ p {
 }
 
 .sect {
-	display: inline-block;
+	display: none;
 	a:nth-of-type(2n) {
 		margin-top: 22px;
 	}
@@ -333,13 +444,18 @@ p {
 }
 
 .staffDesc {
+	margin-top: 96px;
 	ul {
 		position: relative;
+		display: block;
+		margin: 0 auto;
+		width: 90%;
 	}
 	li {
-		float: left;
-		margin-left: 24px;
-		margin-right: 24px;
+		display: block;
+		margin: 0 auto;
+		margin-left: 22px;
+		margin-right: 22px;
 		margin-bottom: 48px;
 		text-align: center;
 		img {
@@ -360,43 +476,230 @@ p {
 }
 
 .patIns {
+	ul {
+		display: block;
+		margin: 0 auto;
+		width: 80%; 
+	}
 	li {
-		width: 28%;
+		width: 90%;
 		border: 1px solid grey;
 		padding-bottom: 36px;
 		@extend .clearfix;
+		h2 {
+			width: 80%;
+			text-align: center;
+		}
 	}
-	button {
+	a {
 		font-size: 10px;
 		text-transform: uppercase;
-		padding: 6px;
+		padding: 6px 8px;
 		background-color: #414554;
 		color: white;
 		border-radius: 2px;
+	}
+	button {
 		border: none;
 	}
 }
 
+@media (min-width: 48em) {
+  .navHeader li {
+    float: left;
+  }
+  .navHeader li a {
+    padding: 20px 30px;
+  }
+  .navHeader .menu {
+    clear: none;
+    max-height: none;
+    margin-top: 18px;
+    float: right;
+  }
+  .navHeader .menu-icon {
+    display: none;
+  }
+}
 
 @media screen and (min-width: 600px) {
+
+	.serviceIcon {
+		width: 280px;
+	}
+
+	.services li {
+		width: 46%;
+	}
+
+	.grid {
+		width: 29%;
+		display: inline-block;
+		margin-top: 48px;
+		margin-bottom: 48px;
+		height: 150px;
+	}
+
+	.xpWindow {
+		float: left;
+		width: 44%;
+		margin-left: 14px;
+		margin-right: 14px;
+	}
+
+	.insurance {
+		li {
+			margin-left: 8px;
+		}
+	}
 	
 }
 
 @media screen and (min-width: 700px) {
+	.navbar {
+		display: block;
+	}
+	.burgerMenu {
+		display: none;
+	}
+
+	.imgIntro {
+		display: block;
+		margin-top: 96px;
+	}
+
+	.imgMain {
+		img {
+			width: 50%;
+			float: left;
+		}
+	}
+
+	.mainTag {
+		position: absolute;
+		float: left;
+		top: 50%;
+		left: 75%;
+		transform: translate(-50%, -50%);
+		text-align: left;
+		margin-top: 0px;
+		width: 40%
+	}
+
+	.mainDis {
+		img {
+			width: 75vw;
+		}
+	}
+	.staffDesc {
+		li {
+			float: left;
+		}
+	}
+
+	.patIns {
+		ul {
+			width: 90%;
+			display: block;
+			margin: 0 auto;
+		}
+		li {
+			width: 40%;
+			float: left;
+			margin-left: 36px;
+		}
+	}
+
+	.xpWindow {
+		width: 45%;
+	}
+
 	
 }
 
+@media screen and (min-width: 800px){
+	.xpWindow {
+		width: 46%;
+	}
+	.sect {
+		display: inline-block;
+	}
+
+	.logo {
+		width: 96px;
+	}
+
+	.staffDesc {
+		margin-top: 144px;
+	}
+
+	.mainDis {
+		float: left;
+		margin-left: 24px;
+		margin-right: 24px;
+		img {
+			width: 298px !important;
+		}
+	}
+	.miniDis {
+		img {
+			width: 205px;
+		}
+	}
+}
 
 @media screen and (min-width: 900px) {
 
 	.mainTag {
-		font-size: 32px;
+		font-size: 38px;
 		width: 34%;
 	}
 
+	.services li {
+		width: 33%;
+	}
+
+	.insurance {
+		li {
+			margin-left: 6px;
+			margin-bottom: 24px;
+			img {
+				width: 290px;
+			}
+		}
+	}
+	.patIns {
+		ul {
+			width: 100%
+		}
+		li {
+			width: 28%;
+			margin-left: 24px;
+		}
+	}
+	.staffDesc {
+		ul {
+			width: 100%;
+		}
+	}
+	.mainDis {
+		margin-left: 60px;
+		img {
+			width: 324px !important;
+		}
+	}
+	.miniDis {
+		img {
+			width: 224px;
+		}
+	}
 }
 
 @media screen and (min-width: 1000px) {
+
+	.container {
+		width: 960px;
+	}
 	.mainTag {
 		font-size: 36px;
 		width: 28%;
