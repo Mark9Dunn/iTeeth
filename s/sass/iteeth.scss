@@ -387,7 +387,7 @@ p {
 }
 
 .grid {
-	width: 80%;
+	width: 60%;
 	display: block;
 	margin: 0 auto;
 	text-transform: uppercase;
@@ -428,6 +428,8 @@ p {
 	font-size: 12px;
 	font-weight: 300;
 }
+
+
 
 .grid ul {
 	display: block;
@@ -494,13 +496,13 @@ p {
 	a {
 		font-size: 10px;
 		text-transform: uppercase;
-		padding: 6px 8px;
-		background-color: #414554;
 		color: white;
-		border-radius: 2px;
 	}
 	button {
 		border: none;
+		padding: 6px 8px;
+		background-color: #414554;
+		border-radius: 2px;
 	}
 }
 
@@ -538,6 +540,10 @@ p {
 		margin-top: 48px;
 		margin-bottom: 48px;
 		height: 150px;
+	}
+
+	.faceIcon {
+		margin-left: 40px !important;
 	}
 
 	.xpWindow {
@@ -631,6 +637,10 @@ p {
 
 	.staffDesc {
 		margin-top: 144px;
+	}
+
+	.details {
+		margin-left: 40px;
 	}
 
 	.mainDis {
